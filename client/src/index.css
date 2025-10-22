@@ -35,6 +35,18 @@ h2 {
   cursor: pointer;
 }
 
+.pokemon-detail{
+
+  list-style: none;
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  border-radius: 15px;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 190;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
 .pokemon-list-item:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
