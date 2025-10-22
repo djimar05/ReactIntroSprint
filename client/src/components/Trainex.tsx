@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, {useState, useEffect} from "react";
 import { useNavigate } from 'react-router-dom';
 
+import { useSelector } from 'react-redux';
 
 import { Trainer } from "../models/Trainer";
 
@@ -11,6 +12,10 @@ const Trainex: React.FC = () => {
     const [error, setError] = useState<string | null>(null);
     const navigate = useNavigate();
     
+    const user = useSelector((state) => state.auth.user );
+    console.log("Trainex >Redux > user", user);
+    
+
 
     useEffect(() => {
         const fetchTrainers = async () => {

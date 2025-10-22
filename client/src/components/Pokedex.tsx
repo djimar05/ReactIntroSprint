@@ -8,12 +8,13 @@ import { Pokemon } from '../models/Pokemon';
 import "../index.css";
 
 import { useNavigate } from 'react-router-dom';
-
-
+import { useSelector } from 'react-redux';
 
 const Pokedex: React.FC = () => {
   const [pokemons, setPokemons] = useState<Pokemon[]>([]);
+  const user = useSelector((state) => state.auth.user );
 
+  console.log("Pokedex >Redux > user", user)
   const navigate = useNavigate();
 
   const [loading, setLoading] = useState(true)
